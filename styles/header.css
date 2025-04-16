@@ -1,11 +1,16 @@
 .header {
-  background-color: var(--bg-color);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   width: 100%;
   top: 0;
-  z-index: 1000;
   transition: background-color 0.5s ease;
+
+  background-color: color-mix(in srgb, var(--bg-color) 70%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-sizing: border-box;
+  overflow-x: clip;
 }
 
 .header__container {
