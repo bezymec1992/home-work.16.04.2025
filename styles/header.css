@@ -4,13 +4,9 @@
   width: 100%;
   top: 0;
   transition: background-color 0.5s ease;
-
-  background-color: color-mix(in srgb, var(--bg-color) 10%, transparent);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color:var(--bg-color);
   z-index: 1000;
-  box-sizing: border-box;
-  overflow-x: clip;
+  
 }
 
 .header__container {
