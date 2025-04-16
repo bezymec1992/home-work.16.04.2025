@@ -1,0 +1,125 @@
+.about__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 80px 0;
+}
+
+.about__wrapper {
+    width: 100%;
+    max-width: 25rem;
+    padding: 2rem;
+    height: fit-content;
+    background-color: hsl(0, 0%, 14%);
+    border-radius: 1rem;
+    border: 1px solid #222;
+    box-shadow: 0px 0px 34px -8px rgba(0, 0, 0, 0.55);
+}
+
+.accordion {
+    background-color: #333;
+    color: #eee;
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.4s ease-out;
+    box-shadow: 0px 0px 34px -8px rgba(0, 0, 0, 0.75);
+}
+
+.accordion:first-child {
+    border-radius: 1rem 1rem 0 0;
+}
+
+.accordion:nth-last-child(1) {
+    border-radius: 0 0 1rem 1rem;
+}
+
+.active, .accordion:hover {
+    background-color: var(--text-hover);
+}
+
+.accordion::after {
+    content: "+";
+    color: #eee;
+    font-weight: bold;
+    float: right;
+    margin-left: 0.5rem;
+}
+
+.active::after {
+    content: "-";
+}
+
+.accordion-content {
+    padding: 0 1rem;
+    background-color: var(--text-gray);
+    color: #aaa;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.accordion-content p {
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.about__icons {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;      
+}
+
+.about__icon {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(0, 0%, 14%);
+    border-radius: 29px;
+    padding: 40px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about__icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about__icon-text {
+    font-size: 24px;
+    font-weight: 300;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding-top: 40px;
+    }
+    .about__container {
+        flex-direction: column;
+        padding: 40px 0;
+    }
+    .about__icon {
+        width: 140px;
+        height: 140px;
+        padding: 20px 0;
+        border-radius: 15px;
+    }
+    .about__icon-text {
+        font-size: 16px;
+    }
+    .about__icon img {
+        width: 50px;
+        height: 50px;
+    }
+}
